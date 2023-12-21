@@ -20,18 +20,22 @@ const Slider = ({ images }) => {
 
   return (
     <section className="slider">
+      {length > 1 && (
       <img
         src={sliderPrev}
         alt="Prev"
         className="left-arrow slider-arrow"
         onClick={prevSlide}
       />
+      )}
+      {length > 1 && (
       <img
         src={sliderNext}
         alt="Next"
         className="right-arrow slider-arrow"
         onClick={nextSlide}
       />
+      )}
       <span className="slider-counter">
         {current + 1} / {length}
       </span>
